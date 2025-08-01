@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wrong Answer Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 Ask a Question, Get a creative Answer</h1>
+    <form method="POST">
+      <input type="text" name="question" placeholder="Type your question here..." required>
+      <button type="submit">Get Answer</button>
+    </form>
+    
+    {% if answer %}
+      <div class="answer-box">
+        <strong>Wrong Answer:</strong> {{ answer }}
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
